@@ -1,9 +1,10 @@
-require("dotenv").config()
-const express = require("express")
-const cors = require("cors")
-const helmet = require("helmet")
+import dotenv from "dotenv"
+dotenv.config()
+import express from "express"
+import cors from "cors"
+import helmet from "helmet"
 
-const mongo = require("./configs/my_db.js")
+import mongo from "./configs/my_db.js"
 
 const app = express()
 
