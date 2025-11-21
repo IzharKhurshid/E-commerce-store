@@ -49,7 +49,7 @@ class userService {
         };
 
         const token = jwt.sign({ user }, process.env.SECRET_KEY, { expiresIn: "1d" });
-        return { token, user }
+        return { token, user };
     };
 };
 
