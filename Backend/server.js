@@ -3,8 +3,9 @@ import cors from "cors";
 import helmet from "helmet";
 import mongo from "./configs/my_db.js";
 import dotenv from "dotenv";
-import userRoute from "./routes/user_route.js";
 import cookieParser from "cookie-parser";
+import userRoute from "./routes/user_route.js";
+import product_routes from './routes/product_route.js'
 dotenv.config()
 
 const app = express()
@@ -20,6 +21,8 @@ const PORT = process.env.PORT || 8880;
 mongo();
 
 app.use("/api/v1/user", userRoute);
+app.use("/products/api", product_routes)
+
 
 app.listen(PORT, () =>{
     mongo()
