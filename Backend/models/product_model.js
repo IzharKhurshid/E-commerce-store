@@ -9,8 +9,12 @@ const product_schema = new mongoose.Schema({
     product_category: { type: String, required: true },
     product_quantity: { type: Number, required: true },
     product_rating: { type: Number, },
-    product_reviews: { type: Number },
+    product_reviews: { type: String },
 
-})
+},
+    {
+        versionKey: false,
+        timestamps: true
+    })
 
 export default mongoose.model("product", product_schema);
